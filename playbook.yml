@@ -1,6 +1,6 @@
 # Test case
 ---
-- hosts: stage
+- hosts: localhost
   tasks:
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
     yum: name={{ item }} state=present
