@@ -12,6 +12,6 @@
         - nginx
         - phpmyadmin
 #        - redisadmin
-        - mysql
+        - mysql-server
 
 
