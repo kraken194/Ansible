@@ -1,0 +1,24 @@
+# Test case
+---
+- hosts: localhost
+  tasks:
+
+  - name: Check linux destributive
+    debug: var=ansible_os_family
+
+
+  - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
+    when: ansible_os_family == "Debian"
+    become: yes
+    apt: 
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+      tags: "{{ item.tags }}"
+    loop:
+      - { name: 'php', state: 'present', tags: 'php' }
+      - { name: 'nginx', state: 'present', tags: 'nginx' }
+      - { name: 'phpmyadmin', state: 'present', tags: 'phpmyadmin' }
+      - { name: 'redis-server', state: 'present', tags: 'redis-server' }    
+      - { name: 'mysql-server', state: 'present', tags: 'mysql-server' }
+      
+      
