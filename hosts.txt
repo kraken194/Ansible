@@ -1,2 +1,2 @@
 [stage]
-localhost ansible_host=localhost
+localhost ansible_host=127.0.0.1
