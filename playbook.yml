@@ -4,9 +4,10 @@
   tasks:
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
     yum: name={{ item }} state=present
+#    ['php', 'nginx', 'mysql', 'phpmyadmin', 'redisadmin']
     with_items:
-        - 'php'
-        - 'nginx'
-        - 'mysql'
-        - 'phpmyadmin'
-        - 'redisadmin'
+        - php
+        - nginx
+        - mysql
+        - phpmyadmin
+        - redisadmin
