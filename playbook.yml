@@ -13,6 +13,7 @@
     apt: 
       name: "{{ item.name }}"
       state: "{{ item.state }}"
+      tags: "{{ item.tags }}"
     loop:
       - { name: 'php', state: 'present', tags: php }
       - { name: 'nginx', state: 'present', tags: nginx }
