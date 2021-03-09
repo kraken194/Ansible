@@ -3,8 +3,9 @@
 - hosts: localhost
   tasks:
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
-    yum: name={{ item }} state=present
-#    ['php', 'nginx', 'mysql', 'phpmyadmin', 'redisadmin']
+#    yum: name={{ item }} state=present
+    yum: name: ['php', 'nginx', 'mysql', 'phpmyadmin', 'redisadmin'] state=present
+#    
     with_items:
         - php
         - nginx
