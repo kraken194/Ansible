@@ -4,6 +4,7 @@
   become: yes
 
   roles:
-    - {roel: For_Debian, when: ansible_os_family == "Debian" }
+    - role: For_Debian 
+      when: ansible_os_family == "Debian"
 
       
