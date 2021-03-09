@@ -1,1 +1,12 @@
 # Test case
+---
+- hosts: stage
+  tasks:
+  - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
+    yum: name={{ item }} state=present
+    with_items:
+        - 'php'
+        - 'nginx'
+        - 'mysql'
+        - 'phpmyadmin'
+        - 'redisadmin'
