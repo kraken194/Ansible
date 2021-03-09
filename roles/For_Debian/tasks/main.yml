@@ -34,5 +34,5 @@
       state=present
       name={{ item|join('-') }}
     with_nested:
-    - "{{php_version}}"
+    - "php"
     - "{{php_modules}}"
