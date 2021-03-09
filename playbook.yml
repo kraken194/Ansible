@@ -3,23 +3,18 @@
 - hosts: localhost
   tasks:
 
- 
   - name: Check linux destributive
     debug: var=ansible_os_family
 
 
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
     become: yes
-    apt: name={{ item[0] }} state={{ item[1] }}
-    with_nested:
-      - [ 'php', 'nginx', 'phpmyadmin', 'redis-server', 'mysql-server' ]
-      - [ 'present', 'latest', 'latest', 'latest', 'latest' ]    
-    
-#    with_items:
-#        - php
-#        - nginx
-#        - phpmyadmin
-#        - redis-server
-#        - mysql-server
+    apt: name={{ item[0] }} state=present
+    with_items:
+        - php
+        - nginx
+        - phpmyadmin
+        - redis-server
+        - mysql-server
 
 
