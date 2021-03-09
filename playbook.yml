@@ -3,13 +3,13 @@
 - hosts: localhost
   tasks:
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
-    apt: name: ['php', 'nginx', 'mysql', 'phpmyadmin', 'redisadmin'] state=present
+#    apt: name: ['php', 'nginx', 'mysql', 'phpmyadmin', 'redisadmin'] state=present
 #    
 
-#    yum: name={{ item }} state=present
-#    with_items:
-#        - php
-#        - nginx
-#        - mysql
-#        - phpmyadmin
-#        - redisadmin
+    apt: name={{ item }} state=present
+    with_items:
+        - php
+        - nginx
+        - mysql
+        - phpmyadmin
+        - redisadmin
