@@ -28,3 +28,6 @@ jobs:
         playbook: playbook.yml 
         directory: ./
         inventory: hosts.txt
+        
+    - name: php version
+      run: php --version
