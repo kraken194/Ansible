@@ -3,32 +3,32 @@
   - name: Install php
     apt: 
       name: php
-      state: {{ php_version }}
+      state: "{{ php_version }}"
     tags: php
 
   - name: Install nginx
     apt: 
       name: nginx
-      state: {{ nginx_version }}
+      state: "{{ nginx_version }}"
     tags: nginx
 
  
   - name: Install mysql-server
     apt: 
       name: mysql-server
-      state: {{ mysql-server_version }}
+      state: "{{ mysql-server_version }}"
     tags: mysql-server
 
   - name: Install phpmyadmin
     apt: 
       name: phpmyadmin
-      state: {{ phpmyadmin_version }}
+      state: "{{ phpmyadmin_version }}"
     tags: phpmyadmin
  
   
   - name: Install redisadmin
     apt: 
       name: redis-server
-      state: {{ redis-server_version }}
+      state: "{{ redis-server_version }}"
     tags: redis-server
 
