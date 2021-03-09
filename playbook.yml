@@ -10,8 +10,8 @@
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
     become: yes
     apt: 
-      name="{{ item.name }}"
-      state="{{ item.state }}"
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
       - { name: 'php', groups: 'present' }
       - { name: 'nginx', groups: 'present' }
