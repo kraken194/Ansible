@@ -19,7 +19,7 @@
     with_items:
         - php
         - nginx
-        - phpmyadmin
+#        - phpmyadmin
 #        - redisadmin
 #        - mysql
 
