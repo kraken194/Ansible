@@ -8,7 +8,7 @@
 
 
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
-    when: ansible_os_family = "Debian"
+    when: ansible_os_family == "Debian"
     become: yes
     apt: 
       name: "{{ item.name }}"
