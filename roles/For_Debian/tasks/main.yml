@@ -31,6 +31,9 @@
 
   - name: Install extra PHP Packages
     apt:
-      pkg=php71-{{item}} 
-      state=installed
-    with_item: "{{php_modules}}"
+      state=present
+      name={{ item|join('-') }}
+    with_nested:
+    - php_version
+    - php_modules
+    when: php_modules is defined
