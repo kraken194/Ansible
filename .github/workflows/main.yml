@@ -22,6 +22,7 @@ jobs:
       # uses: arillso/action.playbook@d5b943e503755e062c15771a7aa639bcaf1e4bd2
       uses: arillso/action.playbook@0.0.4
       with:
+        directory: ./
         # Name of the inventory file in your workspace.
         inventory: hosts
         # Name of the playbook in your workspace.
