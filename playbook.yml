@@ -2,7 +2,12 @@
 ---
 - hosts: localhost
   tasks:
-      
+
+ 
+ - name: Check linux destributive
+   debug: var=ansible_os_family
+
+
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
     become: yes
     apt: name={{ item[0] }} state={{ item[1] }}
