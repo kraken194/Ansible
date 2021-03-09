@@ -21,11 +21,11 @@
   - name: Install redisadmin
     apt: 
       name: redis-server
-      state: '{{ redis_server_version }}'
+      state: '{{ redis_version }}'
     tags: redis-server
 
   - name: Install mysql-server
     apt: 
       name: mysql-server
-      state: '{{ mysql_server_version }}'
+      state: '{{ mysql_version }}'
     tags: mysql-server

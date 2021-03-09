@@ -1,6 +1,7 @@
 ---
+
 php_version          : present 
 nginx_version        : present
 phpmyadmin_version   : present
-redis-server_version : present
-mysql-server_version : present
+redis_version        : present
+mysql_version        : present
