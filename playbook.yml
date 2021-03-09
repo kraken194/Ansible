@@ -9,7 +9,9 @@
 
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
     become: yes
-    apt: name={{ item[0] }} state=present
+    apt: 
+      name={{ item[0] }} 
+      state=present
     with_items:
         - php
         - nginx
