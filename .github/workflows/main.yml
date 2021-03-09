@@ -20,9 +20,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2.3.4
       
-    - name: php modules 1
-      run: php php -m      
-
     - name: Run Ansible playbook
       # You may pin to the exact commit or the version.
       # uses: dawidd6/action-ansible-playbook@3c534b3ba0bcbbee2b13fb45226f71acbaca2a76
@@ -31,12 +28,3 @@ jobs:
         playbook: playbook.yml 
         directory: ./
         inventory: hosts.txt
-        
-    - name: php version
-      run: php --version
-      
-    - name: php modules 2
-      run: php php -m      
-
-    - name: php modules
-      run: php php -m
