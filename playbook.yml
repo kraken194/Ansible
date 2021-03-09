@@ -14,10 +14,10 @@
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
-      - { name: 'php', state: 'present' }
-      - { name: 'nginx', state: 'present' }
-      - { name: 'phpmyadmin', state: 'present' }
-      - { name: 'redis-server', state: 'present' }    
-      - { name: 'mysql-server', state: 'present' }
+      - { name: 'php', state: 'present', tags: php }
+      - { name: 'nginx', state: 'present', tags: nginx }
+      - { name: 'phpmyadmin', state: 'present', tags: phpmyadmin }
+      - { name: 'redis-server', state: 'present', tags: redis-server }    
+      - { name: 'mysql-server', state: 'present', tags: mysql-server }
       
       
