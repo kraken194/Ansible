@@ -6,8 +6,5 @@ phpmyadmin_version   : present
 redis_version        : present
 mysql_version        : present
 
-php_modules          :
-  - "mbstring"
-  - "mcrypt"
-  - "pdo"
-  - "pecl-imagick"
+php_modules          : ["mbstring", "mcrypt", "pdo"]
+
