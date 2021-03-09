@@ -16,7 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v2.3.4
 
+    - name: Run Ansible playbook
+      # You may pin to the exact commit or the version.
+      # uses: dawidd6/action-ansible-playbook@3c534b3ba0bcbbee2b13fb45226f71acbaca2a76
+      uses: dawidd6/action-ansible-playbook@v2.2.0
+      with:
+        playbook: playbook.yml 
+        directory: ./
+        inventory: hosts.txt
+        
+        
 #    - name: Run Ansible Playbook
 #      # You may pin to the exact commit or the version.
 #      # uses: arillso/action.playbook@d5b943e503755e062c15771a7aa639bcaf1e4bd2
@@ -32,11 +45,3 @@ jobs:
 #        # Level of verbosity, 0 up to 4.
 #        verbose: 2
 
-    - name: Run Ansible playbook
-      # You may pin to the exact commit or the version.
-      # uses: dawidd6/action-ansible-playbook@3c534b3ba0bcbbee2b13fb45226f71acbaca2a76
-      uses: dawidd6/action-ansible-playbook@v2.2.0
-      with:
-        playbook: playbook.yml 
-        directory: ./
-        inventory: hosts.txt
