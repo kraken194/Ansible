@@ -1,4 +1,7 @@
 ---
+  - name: Check linux destributive
+    debug: var=ansible_os_family
+
   - name: Install nginx
     apt: 
       name: nginx
