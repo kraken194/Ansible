@@ -1,13 +1,4 @@
 ---
-
-  - name: Install php
-    apt: 
-      name: php
-      state: "{{ php_version }}"
-      with_item: "{{php_modules}}"
-    tags: php
-
-
   - name: Install nginx
     apt: 
       name: nginx
@@ -31,3 +22,15 @@
       name: mysql-server
       state: '{{ mysql_version }}'
     tags: mysql-server
+
+  - name: Install php
+    apt: 
+      name: php
+      state: "{{ php_version }}"
+    tags: php
+
+  - name: Install extra PHP Packages
+    apt:
+      pkg=php71-{{item}} 
+      state=installed
+    with_item: "{{php_modules}}"

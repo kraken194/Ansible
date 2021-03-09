@@ -1,6 +1,6 @@
 ---
 
-php_version          : present 
+php_version          : php71 
 nginx_version        : present
 phpmyadmin_version   : present
 redis_version        : present
