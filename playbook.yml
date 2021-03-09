@@ -4,7 +4,7 @@
   become: yes
 
   roles:
-    - For_Debian 
+    - { role: For_Debian, when: ansible_system == "Debian" }
 
 
       
