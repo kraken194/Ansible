@@ -23,9 +23,9 @@ jobs:
       uses: arillso/action.playbook@0.0.4
       with:
         # Name of the inventory file in your workspace.
-        inventory: ../hosts.txt
+        inventory: ../../hosts.txt
         # Name of the playbook in your workspace.
-        playbook: ../playbook.yml
+        playbook: ../../playbook.yml
         # Only run plays and tasks tagged with these values.
         #tags: # optional
         # Level of verbosity, 0 up to 4.
