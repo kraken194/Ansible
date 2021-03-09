@@ -3,13 +3,13 @@
 - hosts: localhost
   tasks:
   
-- name: Gather the package facts
-  ansible.builtin.package_facts:
-    manager: auto
+  - name: Gather the package facts
+    ansible.builtin.package_facts:
+      manager: auto
     
-- name: Print the package facts
-  ansible.builtin.debug:
-    var: ansible_facts.packages
+  - name: Print the package facts
+    ansible.builtin.debug:
+      var: ansible_facts.packages
     
     
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
@@ -19,7 +19,7 @@
     with_items:
         - php
         - nginx
-#        - phpmyadmin
+        - phpmyadmin
 #        - redisadmin
 #        - mysql
 
