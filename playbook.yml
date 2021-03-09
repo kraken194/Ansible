@@ -4,8 +4,8 @@
   tasks:
 
  
- - name: Check linux destributive
-   debug: var=ansible_os_family
+  - name: Check linux destributive
+    debug: var=ansible_os_family
 
 
   - name: Install php+nginx+mysql+redis+phpmyadmin+redisadmin
