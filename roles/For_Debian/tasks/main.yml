@@ -12,12 +12,6 @@
       state: "{{ nginx_version }}"
     tags: nginx
 
-  - name: Install mysql-server
-    apt: 
-      name: mysql-server
-      state: "{{ mysql-server_version }}"
-    tags: mysql-server
-
   - name: Install phpmyadmin
     apt: 
       name: phpmyadmin
@@ -30,3 +24,8 @@
       state: "{{ redis-server_version }}"
     tags: redis-server
 
+  - name: Install mysql-server
+    apt: 
+      name: mysql-server
+      state: "{{ mysql-server_version }}"
+    tags: mysql-server
