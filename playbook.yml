@@ -7,9 +7,10 @@
 #    
 
     apt: name={{ item }} state=present
+    sudo: yes
     with_items:
         - php
         - nginx
-        - mysql
+#        - mysql
         - phpmyadmin
         - redisadmin
