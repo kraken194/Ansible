@@ -4,7 +4,9 @@
     apt: 
       name: php
       state: "{{ php_version }}"
+      with_item: "{{php_modules}}"
     tags: php
+
 
   - name: Install nginx
     apt: 
