@@ -1,0 +1,82 @@
+name: Test Ansible
+
+on:
+  pull_request:
+    branches:
+    - main
+    
+jobs:
+  Try_Ansible:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+    - name: Run Ansible Playbook
+      # You may pin to the exact commit or the version.
+      # uses: arillso/action.playbook@d5b943e503755e062c15771a7aa639bcaf1e4bd2
+      uses: arillso/action.playbook@0.0.4
+      with:
+        # Name of the galaxy file in your workspace.
+        galaxy_file: # optional
+        # Name of the inventory file in your workspace.
+        inventory: 
+        # Name of the playbook in your workspace.
+        playbook: 
+        # Further limit selected hosts to an additional pattern.
+        limit: # optional
+        # Only run plays and tasks whose tags do not match these values.
+        skip_tags: # optional
+        # Start the playbook at the task matching this name.
+        start_at_task: # optional
+        # Only run plays and tasks tagged with these values.
+        tags: # optional
+        # Set additional variables as key=value.
+        extra_vars: # optional
+        # Prepend paths to module library.
+        module_path: # optional
+        # Run a check, do not apply any changes.
+        check: # optional
+        # When changing (small) files and templates, show the differences in those files; works great with –check.
+        diff: # optional
+        # Clear the fact cache for every host in inventory.
+        flush_cache: # optional
+        # Run handlers even if a task fails.
+        force_handlers: # optional
+        # Outputs a list of matching hosts.
+        list_hosts: # optional
+        # List all available tags.
+        list_tags: # optional
+        # List all tasks that would be executed.
+        list_tasks: # optional
+        # Perform a syntax check on the playbook.
+        syntax_check: # optional
+        # Specify number of parallel processes to use.
+        forks: # optional
+        # The vault identity to use.
+        vault_id: # optional
+        # The vault password to use.
+        vault_password: # optional
+        # Level of verbosity, 0 up to 4.
+        verbose: # optional
+        # Use this key to authenticate the connection.
+        private_key: # optional
+        # Connect as this user.
+        user: # optional
+        # Connection type to use.
+        connection: # optional
+        # Override the connection timeout in seconds.
+        timeout: # optional
+        # Specify common arguments to pass to sftp/scp/ssh.
+        ssh_common_args: # optional
+        # Specify extra arguments to pass to sftp only.
+        sftp_extra_args: # optional
+        # Specify extra arguments to pass to scp only.
+        scp_extra_args: # optional
+        # Specify extra arguments to pass to ssh only.
+        ssh-extra-args: # optional
+        # Run operations with become.
+        become: # optional
+        # Privilege escalation method to use.
+        become_method: # optional
+    # Run operations as this user.
+    become_user: # optional
